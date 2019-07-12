@@ -30,6 +30,26 @@ pip install netaddr
 apt-get install openssl
 clear
 
+# sherlock
+
+git clone https://github.com/sherlock-project/sherlock.git
+cd sherlock
+pip3 install -r requirements.txt
+clear
+
+# PHONEINFOGA
+
+git clone https://github.com/sundowndev/PhoneInfoga.git
+cd PhoneInfoga
+python3 -m pip install -r requirements.txt
+chmod +x phoneinfoga.py
+cp config.example.py config.py
+wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+tar xvfz geckodriver-v0.24.0-linux64.tar.gz
+chmod +x geckodriver
+export PATH=$PATH:/root/PhoneInfoga
+clear
+
 cd /root
 chmod +x WVSCAN.sh
 gnome-terminal -- "./WVSCAN.sh"
