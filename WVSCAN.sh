@@ -114,6 +114,7 @@ then
 
      	cd /root
      	cd PhoneInfoga
+     	export PATH=$PATH:/root/PhoneInfoga
      	python3 phoneinfoga.py -v
      	python3 phoneinfoga.py -h
 
