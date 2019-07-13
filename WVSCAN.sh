@@ -103,6 +103,7 @@ then
 
      	cd /root
      	cd PhoneInfoga
+     	export PATH=$PATH:/root/PhoneInfoga
      	python3 phoneinfoga.py -v
      	read -p " ENTER PHONE NO WITH COUNTRY CODE : " pn
      	python3 phoneinfoga.py -n $pn  --recon
