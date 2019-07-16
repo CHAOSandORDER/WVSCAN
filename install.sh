@@ -50,6 +50,23 @@ chmod +x geckodriver
 export PATH=$PATH:/root/PhoneInfoga
 clear
 
+# nmap vulscan,nmap-vulners
+
+cd /usr/share/nmap/scripts/
+git clone https://github.com/vulnersCom/nmap-vulners.git
+git clone https://github.com/scipag/vulscan.git
+cd vulscan
+chmod +x vulscan.nse
+cd ..
+cd nmap-vulners
+chmod +x vulners.nse
+cd ..
+cd vulscan/utilities/updater/
+chmod +x updateFiles.sh
+./updateFiles.sh
+clear
+
+# open tool
 cd /root
 chmod +x WVSCAN.sh
 gnome-terminal -- "./WVSCAN.sh"
