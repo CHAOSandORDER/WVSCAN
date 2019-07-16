@@ -13,7 +13,7 @@
 
 echo " WEB VULNERABILITY SCAN "
 echo "   "
-echo " SELECT A TOOL ( 1 -6 ) : "
+echo " SELECT A TOOL ( 1 - 7 ) : "
 echo "    "
 echo " (1) RED_HAWK "
 echo " (2) Tidos-framework "
@@ -21,6 +21,7 @@ echo " (3) Nikto "
 echo " (4) A2SV "
 echo " (5) FIND SOMEONE BY BY THEIR USERNAME ACROSS ALL SOCIAL MEDIA "
 echo " (6) OSINT ON A PHONE NO.  "
+echo " (7) DMITRY "
 echo -n " ENTER YOUR SELECTION : "
 read s
 
@@ -121,5 +122,14 @@ then
 
      fi
 
+
+fi
+
+if [ $s -eq 7 ]
+
+then
+
+     cd /root
+     dmitry -h
 
 fi
