@@ -32,7 +32,7 @@ then
 
      cd /root
      cd RED_HAWK
-     php rhawk.php
+     xterm -e "php rhawk.php" &
 
 fi
 
@@ -41,7 +41,7 @@ if [ $s -eq 2 ]
 then
 
      cd /root
-     tidos
+     xterm -e "tidos" &
 
 fi
 
@@ -50,7 +50,7 @@ if [ $s -eq 3 ]
 then
 
      cd /root
-     nikto -h
+     xterm -e "nikto -h" &
 
 fi
 
@@ -60,7 +60,7 @@ then
 
      cd /root
      cd a2sv
-     python a2sv.py -h
+     xterm -e "python a2sv.py -h" &
 
 fi
 
@@ -77,7 +77,7 @@ then
      	cd /root
      	cd sherlock
      	read -p " ENTER USERNAME : " un
-     	python3 sherlock.py $un
+     	xterm -e "python3 sherlock.py $un" &
 
      fi
 
@@ -87,7 +87,7 @@ then
 
      	cd /root
      	cd sherlock
-     	python3 sherlock.py -h
+     	xterm -e "python3 sherlock.py -h" &
 
      fi
 
@@ -108,7 +108,7 @@ then
      	export PATH=$PATH:/root/PhoneInfoga
      	python3 phoneinfoga.py -v
      	read -p " ENTER PHONE NO WITH COUNTRY CODE : " pn
-     	python3 phoneinfoga.py -n $pn  --recon
+     	xterm -e "python3 phoneinfoga.py -n $pn  --recon" &
      fi
 
      if [ $c -eq 2 ]
@@ -119,7 +119,7 @@ then
      	cd PhoneInfoga
      	export PATH=$PATH:/root/PhoneInfoga
      	python3 phoneinfoga.py -v
-     	python3 phoneinfoga.py -h
+     	xterm -e "python3 phoneinfoga.py -h" &
 
      fi
 
@@ -130,7 +130,7 @@ if [ $s -eq 7 ]
 
 then
 
-     dmitry 
+     xterm -e "dmitry" 
 
 fi
 
@@ -151,7 +151,7 @@ then
         then
                 read -p "ENTER IP : " ip
                 read -p "ENTER PORT : " po
-                nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p $po $ip
+                xterm -e "nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV -p $po $ip" &
 
         fi
 
@@ -160,7 +160,7 @@ then
         then
                 
                 read -p " ENTER IP : " ip
-                nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV  $ip
+                xterm -e "nmap --script nmap-vulners,vulscan --script-args vulscandb=scipvuldb.csv -sV  $ip" &
 
         fi
     fi
@@ -169,8 +169,11 @@ then
 
     then
 
-        nmap -h
+        xterm -e "nmap -h" &
 
     fi
 
 fi
+
+cd /root
+./WVSCAN.sh 

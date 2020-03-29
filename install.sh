@@ -14,6 +14,7 @@ clear
 git clone https://github.com/0xinfection/tidos-framework.git
 cd tidos-framework
 chmod +x install
+python -m pip install xmpppy
 ./install
 clear
 
@@ -69,5 +70,5 @@ clear
 # open tool
 cd /root
 chmod +x WVSCAN.sh
-gnome-terminal -- "./WVSCAN.sh"
+xfce4-terminal -- "./WVSCAN.sh" ; gnome-terminal -- "./WVSCAN.sh"
 exit
